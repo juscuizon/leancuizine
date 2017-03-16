@@ -7,8 +7,10 @@
 @import '0-tools/normalize';
 
 // 1 - basics
+@import '1-basics/page-margin-padding';
 
 // 2 - modules
+@import '2-modules/header';
 
 // 3 - pages
-@import '3-pages/temporary';
+@import '3-pages/blog-content-container';
