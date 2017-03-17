@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rokkitt");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 @import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Lekton|Molengo");
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2631,20 +2632,35 @@ template {
   margin: 0px;
   padding: 0px; }
 
-nav ul {
+nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  nav ul {
+    border-top: 3px solid transparent; }
+  nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px; }
+  nav a {
+    color: #211f1f;
+    text-decoration: none; }
+  nav a:hover {
+    color: #12dc12;
+    border-top: 3px solid green; }
 
-nav li {
-  list-style-type: none;
-  margin-right: 10px; }
+.active {
+  color: #12dc12;
+  border-top: 3px solid green; }
 
-nav a {
-  color: grey;
-  text-decoration: none; }
-
-nav a:hover {
-  color: green;
-  text-decoration: underline; }
+@media (min-width: 50px) and (max-width: 500px) {
+  nav {
+    display: none; } }
