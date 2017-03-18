@@ -2632,6 +2632,9 @@ template {
   margin: 0px;
   padding: 0px; }
 
+body {
+  background-color: #efefef; }
+
 nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2642,25 +2645,120 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  nav ul {
-    border-top: 3px solid transparent; }
   nav li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 50px;
+    border-top: 3px solid transparent;
     font-family: 'Molengo', sans-serif;
     font-size: 18px; }
-  nav a {
-    color: #211f1f;
-    text-decoration: none; }
-  nav a:hover {
+    nav li a {
+      color: #211f1f;
+      text-decoration: none; }
+    nav li a:hover {
+      color: #12dc12;
+      border-top: 4px solid green;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+  nav li.active a {
     color: #12dc12;
-    border-top: 3px solid green; }
+    border-top: 5px solid green;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
 
-.active {
-  color: #12dc12;
-  border-top: 3px solid green; }
+/*============End of Navigation Bar==============*/
+#logo {
+  background-image: url(../img/logo-header.png);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  top: 10px;
+  margin: 0 auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
+/*=============Start of Mobile Navigation=============*/
+.mobile-nav-button {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 10px; }
+
+.open {
+  background-image: url(../img/mobile-nav-button-spoon-fork.svg);
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.close {
+  background-image: url(../img/mobile-nav-button-dumbbell.svg);
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+#mobile-menu {
+  position: fixed;
+  display: none;
+  background-color: #fefefe;
+  text-align: center;
+  overflow-y: hidden;
+  min-width: 100%;
+  z-index: -1; }
+  #mobile-menu li {
+    list-style-type: none;
+    margin-bottom: 30px;
+    border-top: 3px solid transparent;
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px; }
+    #mobile-menu li a {
+      color: #211f1f;
+      text-decoration: none; }
+
+.closed {
+  max-height: 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.opened {
+  max-height: 300px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+          transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+
+/*=============End of Mobile Navigation=============*/
+/*=============Medium Monitors=============*/
+/*=============Small Monitors=============*/
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px) {
+  nav {
+    display: none; }
+  #logo {
+    position: fixed;
+    top: 0px;
+    margin: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .mobile-nav-button {
+    display: block; }
+  #mobile-menu {
+    display: block; } }
+
+/*=============Small Mobile Devices=============*/
 @media (min-width: 50px) and (max-width: 500px) {
   nav {
-    display: none; } }
+    display: none; }
+  #logo {
+    position: fixed;
+    top: 0px;
+    margin: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .mobile-nav-button {
+    display: block; }
+  #mobile-menu {
+    display: block; } }

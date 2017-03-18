@@ -1,10 +1,17 @@
 mixin  navigation-links
 	ul
-		li: a(href="{{site.baseurl}}/index.html") Home
+		li.active: a(href="{{site.baseurl}}/..") Home
+		li: a(href="{{site.baseurl}}/Menu&Pricing") Menu&Pricing	
 		li: a(href="{{site.baseurl}}/Blog") Blog
-		li: a(href="{{site.baseurl}}/About-us") About us
-		li: a(href="{{site.baseurl}}/Menu&Pricing") Menu&Pricing		
+		li: a(href="{{site.baseurl}}/About-us") About us	
 		li: a(href="{{site.baseurl}}/Contact&Reservation") Contact&Reservation
 
 nav
+	+navigation-links
+
+#logo
+
+span#mobile-nav-button.mobile-nav-button.close
+
+#mobile-menu.closed
 	+navigation-links

@@ -2,43 +2,133 @@ nav
 	display: flex
 	width: 100%
 	justify-content: center
-
-	ul
-		border-top: 3px solid transparent
-
+	
 	li
 		list-style-type: none
 		display: inline-block
-		margin-right: 15px
+		margin-right: 50px
+		border-top: 3px solid transparent
 		font:
 			family: 'Molengo', sans-serif
 			size: 18px
 		
-	a
-		color: #211f1f
-		text-decoration: none
-	
-	a:hover
-		color: #12dc12
-		border-top: 3px solid green
+		a
+			color: #211f1f
+			text-decoration: none
+		
+		a:hover
+			color: #12dc12
+			border-top: 4px solid green	
+			transition: all 0.2s ease-in-out	
 
-.active
-	color: #12dc12
-	border-top: 3px solid green
+	li.active 
+		a
+			color: #12dc12
+			border-top: 5px solid green
+			transition: all 0.2s ease-in-out
+/*============End of Navigation Bar==============*/	
+#logo
+	background:
+		image: url(../img/logo-header.png)
+		repeat: no-repeat
+	width: 120px
+	height: 120px
+	top: 10px
+	margin: 0 auto
+	transition: all 0.2s ease-in-out
 
-//Medium Monitors
+/*=============Start of Mobile Navigation=============*/
+.mobile-nav-button
+	display: none
+	position: fixed
+	width: 50px
+	height: 50px
+	top: 20px
+	right: 10px
+
+.open
+	background:
+		image: url(../img/mobile-nav-button-spoon-fork.svg)
+		repeat: no-repeat
+	transition: all 0.2s ease-in-out
+
+.close
+	background:
+		image: url(../img/mobile-nav-button-dumbbell.svg)
+		repeat: no-repeat
+	transition: all 0.2s ease-in-out
+
+#mobile-menu
+	position: fixed
+	display: none
+	background-color: #fefefe
+	text-align: center
+	overflow-y: hidden
+	min-width: 100%
+	z-index: -1
+
+	li
+		list-style-type: none
+		margin-bottom: 30px
+		border-top: 3px solid transparent
+		font:
+			family: 'Molengo', sans-serif
+			size: 18px
+		
+		a
+			color: #211f1f
+			text-decoration: none
+
+.closed
+	max-height: 0px
+	transition: all 0.2s ease-in-out
+
+.opened
+	max-height: 300px
+	transition-property: all
+	transition-duration: .5s
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+
+/*=============End of Mobile Navigation=============*/
+
+/*=============Medium Monitors=============*/
 @media (min-width: 960px) and (max-width: 1200px)
 	nav
 
-//Small Monitors
+/*=============Small Monitors=============*/
 @media (min-width: 801px) and (max-width: 960px)
 	nav
 
-//Small Monitors and Tablets
+/*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px)
 	nav
+		display: none
 
-//Small Mobile Devices
+	#logo
+		position: fixed
+		top: 0px
+		margin: 0
+		transition: all 0.2s ease-in-out
+
+	.mobile-nav-button
+		display: block
+
+	#mobile-menu
+		display: block
+
+/*=============Small Mobile Devices=============*/
 @media (min-width: 50px) and (max-width: 500px)
 	nav
 		display: none
+
+	#logo
+		position: fixed
+		top: 0px
+		margin: 0
+		transition: all 0.2s ease-in-out
+
+	.mobile-nav-button
+		display: block
+
+	#mobile-menu
+		display: block
