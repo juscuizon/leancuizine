@@ -6,12 +6,23 @@ mixin  navigation-links
 		li: a(href="{{site.baseurl}}/About-us") About us	
 		li: a(href="{{site.baseurl}}/Contact&Reservation") Contact&Reservation
 
+mixin contact-links 
+	ul
+		li +63 (997) 611-3632 
+		li: a(href="https://www.facebook.com/leancuizineph" target="_blank"): i.fa.fa-facebook-official.fa
+		li: a(href="https://www.instagram.com/leancuizineph/" target="_blank"): i.fa.fa-instagram.fa
+		li: a(href="https://twitter.com/leancuizineph" target="_blank"): i.fa.fa-twitter-square.fa
+
 nav
 	+navigation-links
 
-#logo
-
-span#mobile-nav-button.mobile-nav-button.close
+.contact
+	+contact-links
+	
+//Mobile Navigation
+span#mobile-nav-button.mobile-nav-button.close 
 
 #mobile-menu.closed
 	+navigation-links
+	.social-links
+		+contact-links

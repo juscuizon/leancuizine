@@ -1,0 +1,103 @@
+.jumbotron-container
+	background:
+		image: url(../img/jumbotron-image.jpg)
+		repeat: no-repeat
+	width: 100%
+	height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background:
+		position: center center
+		size: cover
+	top: -16px
+	z-index: 0
+
+	.logo
+		background:
+			image: url(../img/logo-header.png)
+			repeat: no-repeat
+		width: 100px
+		height: 100px
+		margin: 0 auto
+		border-bottom: 20px
+		z-index: 1
+
+	p 
+		font:
+			family: 'Lobster Two', cursive
+			size: 40px
+		text-align: center
+		color: #f3f3f3
+		margin-bottom: 20px
+
+	.about-excerpt
+		font: 
+			family: 'Cabin Condensed', sans-serif
+			size: 35px
+		background: rgba(0, 0, 0, 0.5)
+
+	a 
+		margin: 0 auto
+
+	button
+		background-color: green
+		border: none
+			radius: 2px
+		color: white
+		padding-top: 12px
+		padding-bottom: 15px
+		width: 180px
+		height: 40px
+		margin-top: 20px
+		text-decoration: none
+		display: inline-block
+		font:
+			family: 'Lekton', sans-serif
+			size: 16px
+		z-index: 0
+
+	button:hover
+		background-color: #12dc12
+
+/*=============Medium Monitors=============*/
+@media (min-width: 960px) and (max-width: 1200px)
+	.jumbotron-container
+
+/*=============Small Monitors=============*/
+@media (min-width: 801px) and (max-width: 960px)
+	.jumbotron-container
+
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px)
+	.jumbotron-container
+		height: 650px
+
+	.logo
+		position: absolute
+		top: 20px
+		margin: 0
+		transition: all 0.2s ease-in-out
+
+/*=============Medium Phone Devices=============*/
+@media (min-width: 321px) and (max-width: 500px)
+	.jumbotron-container
+		height: 890px
+
+	.logo
+		position: absolute
+		top: 20px
+		margin: 0
+		transition: all 0.2s ease-in-out
+
+
+/*=============Small Phone Devices=============*/
+@media (min-width: 50px) and (max-width: 320px)
+	.jumbotron-container
+		height: 950px
+
+	.logo
+		position: absolute
+		top: 20px
+		margin: 0
+		transition: all 0.2s ease-in-out

@@ -8,6 +8,8 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 @import url("https://fonts.googleapis.com/css?family=Righteous");
 @import url("https://fonts.googleapis.com/css?family=Lekton|Molengo");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
+@import url("https://fonts.googleapis.com/css?family=Cabin+Condensed");
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2633,7 +2635,11 @@ template {
   padding: 0px; }
 
 body {
-  background-color: #efefef; }
+  background-color: #efefef;
+  min-height: 1200px; }
+
+html {
+  overflow-x: hidden; }
 
 nav {
   display: -webkit-box;
@@ -2646,12 +2652,13 @@ nav {
       -ms-flex-pack: center;
           justify-content: center; }
   nav li {
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px;
     list-style-type: none;
     display: inline-block;
     margin-right: 50px;
     border-top: 3px solid transparent;
-    font-family: 'Molengo', sans-serif;
-    font-size: 18px; }
+    z-index: 2; }
     nav li a {
       color: #211f1f;
       text-decoration: none; }
@@ -2666,18 +2673,23 @@ nav {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
 
-/*============End of Navigation Bar==============*/
-#logo {
-  background-image: url(../img/logo-header.png);
-  background-repeat: no-repeat;
-  width: 120px;
-  height: 120px;
-  top: 10px;
-  margin: 0 auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+.contact {
+  position: relative;
+  text-align: right;
+  top: -20px;
+  z-index: 1; }
+  .contact p {
+    font-size: 15px; }
+  .contact li {
+    display: inline-block;
+    margin-right: 5px; }
+  .contact a {
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px;
+    color: #12dc12;
+    text-decoration: none; }
 
-/*=============Start of Mobile Navigation=============*/
+/*============End of Navigation Bar==============*/
 .mobile-nav-button {
   display: none;
   position: fixed;
@@ -2690,13 +2702,15 @@ nav {
   background-image: url(../img/mobile-nav-button-spoon-fork.svg);
   background-repeat: no-repeat;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  z-index: 2; }
 
 .close {
   background-image: url(../img/mobile-nav-button-dumbbell.svg);
   background-repeat: no-repeat;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  z-index: 2; }
 
 #mobile-menu {
   position: fixed;
@@ -2705,7 +2719,8 @@ nav {
   text-align: center;
   overflow-y: hidden;
   min-width: 100%;
-  z-index: -1; }
+  top: 0px;
+  z-index: 1; }
   #mobile-menu li {
     list-style-type: none;
     margin-bottom: 30px;
@@ -2713,16 +2728,17 @@ nav {
     font-family: 'Molengo', sans-serif;
     font-size: 18px; }
     #mobile-menu li a {
-      color: #211f1f;
+      color: #12dc12;
       text-decoration: none; }
 
 .closed {
   max-height: 0px;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  z-index: 2; }
 
 .opened {
-  max-height: 300px;
+  max-height: 500px;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: .5s;
@@ -2730,35 +2746,142 @@ nav {
   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
           transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
 
+.social-links li {
+  color: #12dc12;
+  display: inline-block;
+  margin-right: 20px; }
+
+.social-links a {
+  color: #12dc12;
+  text-decoration: none; }
+
 /*=============End of Mobile Navigation=============*/
 /*=============Medium Monitors=============*/
 /*=============Small Monitors=============*/
+@media (min-width: 801px) and (max-width: 960px) {
+  nav {
+    display: block; }
+    nav li {
+      margin-right: 45px; } }
+
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px) {
   nav {
     display: none; }
-  #logo {
-    position: fixed;
-    top: 0px;
-    margin: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
+  .contact {
+    display: none; }
   .mobile-nav-button {
     display: block; }
   #mobile-menu {
-    display: block; } }
+    display: block;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; } }
 
 /*=============Small Mobile Devices=============*/
 @media (min-width: 50px) and (max-width: 500px) {
   nav {
     display: none; }
-  #logo {
-    position: fixed;
-    top: 0px;
-    margin: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
+  .contact {
+    display: none; }
   .mobile-nav-button {
     display: block; }
   #mobile-menu {
-    display: block; } }
+    display: block;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; } }
+
+.jumbotron-container {
+  background-image: url(../img/jumbotron-image.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  top: -16px;
+  z-index: 0; }
+  .jumbotron-container .logo {
+    background-image: url(../img/logo-header.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 20px;
+    z-index: 1; }
+  .jumbotron-container p {
+    font-family: 'Lobster Two', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #f3f3f3;
+    margin-bottom: 20px; }
+  .jumbotron-container .about-excerpt {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 35px;
+    background: rgba(0, 0, 0, 0.5); }
+  .jumbotron-container a {
+    margin: 0 auto; }
+  .jumbotron-container button {
+    background-color: green;
+    border: none;
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    width: 180px;
+    height: 40px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Lekton', sans-serif;
+    font-size: 16px;
+    z-index: 0; }
+  .jumbotron-container button:hover {
+    background-color: #12dc12; }
+
+/*=============Medium Monitors=============*/
+/*=============Small Monitors=============*/
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px) {
+  .jumbotron-container {
+    height: 650px; }
+  .logo {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; } }
+
+/*=============Medium Phone Devices=============*/
+@media (min-width: 321px) and (max-width: 500px) {
+  .jumbotron-container {
+    height: 890px; }
+  .logo {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; } }
+
+/*=============Small Phone Devices=============*/
+@media (min-width: 50px) and (max-width: 320px) {
+  .jumbotron-container {
+    height: 950px; }
+  .logo {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; } }

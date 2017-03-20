@@ -4,13 +4,14 @@ nav
 	justify-content: center
 	
 	li
+		font:
+			family: 'Molengo', sans-serif
+			size: 18px
 		list-style-type: none
 		display: inline-block
 		margin-right: 50px
 		border-top: 3px solid transparent
-		font:
-			family: 'Molengo', sans-serif
-			size: 18px
+		z-index: 2
 		
 		a
 			color: #211f1f
@@ -26,18 +27,31 @@ nav
 			color: #12dc12
 			border-top: 5px solid green
 			transition: all 0.2s ease-in-out
-/*============End of Navigation Bar==============*/	
-#logo
-	background:
-		image: url(../img/logo-header.png)
-		repeat: no-repeat
-	width: 120px
-	height: 120px
-	top: 10px
-	margin: 0 auto
-	transition: all 0.2s ease-in-out
 
-/*=============Start of Mobile Navigation=============*/
+.contact
+	position: relative
+	text-align: right
+	top: -20px
+	z-index: 1
+
+	p
+		font:
+			family:
+			size: 15px
+
+	li
+		display: inline-block
+		margin-right: 5px
+	a	
+		font:
+			family: 'Molengo', sans-serif
+			size: 18px
+		color: #12dc12
+		text-decoration: none
+
+
+/*============End of Navigation Bar==============*/	
+
 .mobile-nav-button
 	display: none
 	position: fixed
@@ -51,12 +65,14 @@ nav
 		image: url(../img/mobile-nav-button-spoon-fork.svg)
 		repeat: no-repeat
 	transition: all 0.2s ease-in-out
+	z-index: 2
 
 .close
 	background:
 		image: url(../img/mobile-nav-button-dumbbell.svg)
 		repeat: no-repeat
 	transition: all 0.2s ease-in-out
+	z-index: 2
 
 #mobile-menu
 	position: fixed
@@ -65,7 +81,8 @@ nav
 	text-align: center
 	overflow-y: hidden
 	min-width: 100%
-	z-index: -1
+	top: 0px
+	z-index: 1
 
 	li
 		list-style-type: none
@@ -76,18 +93,29 @@ nav
 			size: 18px
 		
 		a
-			color: #211f1f
+			color: #12dc12
 			text-decoration: none
 
 .closed
 	max-height: 0px
 	transition: all 0.2s ease-in-out
+	z-index: 2
 
 .opened
-	max-height: 300px
+	max-height: 500px
 	transition-property: all
 	transition-duration: .5s
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+
+.social-links
+	li
+		color: #12dc12
+		display: inline-block
+		margin-right: 20px
+	
+	a
+		color: #12dc12
+		text-decoration: none
 
 /*=============End of Mobile Navigation=============*/
 
@@ -98,37 +126,37 @@ nav
 /*=============Small Monitors=============*/
 @media (min-width: 801px) and (max-width: 960px)
 	nav
+		display:  block
+
+		li 
+			margin-right: 45px
 
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px)
 	nav
 		display: none
 
-	#logo
-		position: fixed
-		top: 0px
-		margin: 0
-		transition: all 0.2s ease-in-out
+	.contact
+		display: none
 
 	.mobile-nav-button
 		display: block
 
 	#mobile-menu
 		display: block
+		transition: all 0.2s ease-in-out
 
 /*=============Small Mobile Devices=============*/
 @media (min-width: 50px) and (max-width: 500px)
 	nav
 		display: none
 
-	#logo
-		position: fixed
-		top: 0px
-		margin: 0
-		transition: all 0.2s ease-in-out
+	.contact
+		display: none
 
 	.mobile-nav-button
 		display: block
 
 	#mobile-menu
 		display: block
+		transition: all 0.2s ease-in-out
