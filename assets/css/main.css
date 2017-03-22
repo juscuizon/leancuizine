@@ -2728,6 +2728,13 @@ nav {
     font-family: 'Molengo', sans-serif;
     font-size: 18px; }
     #mobile-menu li a {
+      color: black;
+      text-decoration: none; }
+  #mobile-menu .social-links li {
+    color: #12dc12;
+    display: inline-block;
+    margin-right: 20px; }
+    #mobile-menu .social-links li a {
       color: #12dc12;
       text-decoration: none; }
 
@@ -2745,15 +2752,6 @@ nav {
           transition-duration: .5s;
   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
           transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
-
-.social-links li {
-  color: #12dc12;
-  display: inline-block;
-  margin-right: 20px; }
-
-.social-links a {
-  color: #12dc12;
-  text-decoration: none; }
 
 /*=============End of Mobile Navigation=============*/
 /*=============Medium Monitors=============*/
@@ -2828,7 +2826,7 @@ nav {
     margin-bottom: 20px; }
   .jumbotron-container .about-excerpt {
     font-family: 'Cabin Condensed', sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     background: rgba(0, 0, 0, 0.5); }
   .jumbotron-container a {
     margin: 0 auto; }
