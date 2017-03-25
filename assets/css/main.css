@@ -2636,7 +2636,7 @@ template {
 
 body {
   background-color: #efefef;
-  min-height: 1400px;
+  min-height: 900px;
   min-width: 100vw;
   overflow-x: hidden; }
 
@@ -2825,7 +2825,6 @@ nav {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  top: -16px;
   z-index: 0;
   overflow-x: hidden; }
   .jumbotron-container .logo {
@@ -2834,7 +2833,6 @@ nav {
     width: 100px;
     height: 100px;
     margin: 0 auto;
-    border-bottom: 20px;
     z-index: 1; }
   .jumbotron-container p, .jumbotron-container h1 {
     font-family: 'Lobster Two', cursive;
@@ -2890,7 +2888,7 @@ nav {
 /*=============Medium Phone Devices=============*/
 @media (min-width: 321px) and (max-width: 500px) {
   .jumbotron-container {
-    height: 890px;
+    height: 900px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -2942,7 +2940,6 @@ nav {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  top: -16px;
   overflow-x: hidden;
   z-index: 0; }
   .home-contact-container .center-home-contact {
@@ -2971,6 +2968,10 @@ nav {
       font-size: 20px;
       color: #12dc12;
       text-decoration: none; }
+    .home-contact-container .contact-excerpt a:hover {
+      color: green;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
   .home-contact-container .contact-excerpt-submenu {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3158,3 +3159,82 @@ nav {
               justify-content: center; }
     .home-contact-container .newsletter {
       border-left: none; } }
+
+.footer-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150px;
+  bottom: 0px;
+  left: 0px;
+  background-color: green; }
+  .footer-container .footer-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .footer-container .footer-flex p {
+      font-family: 'Molengo', sans-serif;
+      color: white; }
+    .footer-container .footer-flex h4 {
+      font-family: 'Molengo', sans-serif;
+      color: white; }
+  .footer-container .logo {
+    background-image: url(../img/logo-header.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    z-index: 1; }
+  .footer-container .nav-footer li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-family: 'Molengo', sans-serif;
+    font-size: 13px; }
+  .footer-container .nav-footer a {
+    text-decoration: none;
+    color: white; }
+  .footer-container .nav-footer a:hover {
+    color: #12dc12;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .footer-container .copyright {
+    margin: 0 auto;
+    top: 0px;
+    font-family: 'Molengo', sans-serif;
+    color: white; }
+    .footer-container .copyright a {
+      text-decoration: none;
+      color: white; }
+    .footer-container .copyright a:hover {
+      color: #12dc12;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+  .footer-container .social-media {
+    margin: 0 auto;
+    top: 0px; }
+    .footer-container .social-media ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .footer-container .social-media ul li {
+        list-style: none;
+        margin-right: 10px; }
+      .footer-container .social-media ul a {
+        color: white; }
+      .footer-container .social-media ul a:hover {
+        color: #12dc12; }
+
+.filler {
+  height: 150vh;
+  background-color: black; }

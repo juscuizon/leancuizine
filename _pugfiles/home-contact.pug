@@ -4,7 +4,7 @@
 
 			.contact-excerpt-submenu
 				.contact-form-home
-					form(action="//formspree.io/your@email.com" method="POST")
+					form(action="//formspree.io/contact@leancuizine.com" method="POST")
 						.name
 							span.label Name
 							br
@@ -16,16 +16,17 @@
 						.message
 							span.label Message
 							br
-							textarea(name="Message", cols="30", rows="5")
+							textarea(type="textarea" name="Message", cols="30", rows="5")
+							input(type="text" name="_gotcha" style="display:none")
 						button(type="submit", value="SEND") SEND
 
 				.contact-excerpt-card
 					h3 Address
 					h4: i.fa.fa-car: a(href="https://www.google.com.ph/maps/place/7-Eleven/@8.2377157,124.2437184,19.83z/data=!4m8!1m2!2m1!1s7-eleven+near+Tibanga+Internal+Road,+Iligan+City,+Northern+Mindanao!3m4!1s0x0:0xf7d0a13de9ec772b!8m2!3d8.2377671!4d124.2438886?hl=en" target="_blank") Tibanga Iligan City Philippines 9200
 					h3 Phone
-					h4: i.fa.fa-phone: a(href="tel:+639976113632") click to call us
+					h4: i.fa.fa-phone: a(href="tel:+639976113632") Click to call us
 					h3 Email
-					h4: i.fa.fa-envelope-open: a(href="mailto:&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#108;&#101;&#97;&#110;&#99;&#117;&#105;&#122;&#105;&#110;&#101;&#46;&#99;&#111;&#109;?subject=Site-Link-Click") click to email us
+					h4: i.fa.fa-envelope-open: a(href="mailto:&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#108;&#101;&#97;&#110;&#99;&#117;&#105;&#122;&#105;&#110;&#101;&#46;&#99;&#111;&#109;?subject=Site-Link-Click") Click to e-mail us
 					
 		.newsletter 
 			h2.center-home-contact Newsletter

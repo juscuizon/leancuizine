@@ -17,11 +17,15 @@
         <script type="text/javascript" src="{{site.baseurl}}/assets/js/active-menu-toggle.js"></script>
         <script type="text/javascript" src="{{site.baseurl}}/assets/js/mobile-nav-click.js"></script>
         <script type="text/javascript" src="{{site.baseurl}}/assets/js/mobile-menu-dropdown.js"></script>
+        <script type="text/javascript" src="{{site.baseurl}}/assets/js/form.js"></script>
     </head>
     
     <body>
+        {% include main-navigation.html %}
         <div class="main-wrapper">
             {{content}}
-        </div>
+         </div>
+         {% include footer.html %}
     </body>
+    
 </html>
