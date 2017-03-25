@@ -25,7 +25,7 @@
 			repeat: no-repeat
 		width: 100px
 		height: 100px
-		z-index: 1
+		z-index: 0
 
 	.nav-footer
 		li
@@ -76,4 +76,48 @@
 			a:hover
 				color: #12dc12
 
+/*=============Medium Monitors=============*/
+@media (min-width: 960px) and (max-width: 1200px)
+	.footer-container
 
+/*=============Small Monitors=============*/
+@media (min-width: 801px) and (max-width: 960px)
+	.footer-container
+
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px)
+	.footer-container
+		height: 200px
+		
+		.logo
+			display: none
+
+/*=============Medium Phone Devices=============*/
+@media (min-width: 321px) and (max-width: 500px)
+	.footer-container
+		flex-direction: column
+		height: 200px
+
+		.footer-flex
+			flex-direction: column
+
+		.logo
+			display: none
+		
+		.nav-footer
+			display: none
+
+/*=============Small Phone Devices=============*/
+@media (min-width: 50px) and (max-width: 320px)
+	.footer-container
+		flex-direction: column
+		height: 200px
+
+		.footer-flex
+			flex-direction: column
+
+		.logo
+			display: none
+		
+		.nav-footer
+			display: none
