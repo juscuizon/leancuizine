@@ -2888,7 +2888,7 @@ nav {
 /*=============Medium Phone Devices=============*/
 @media (min-width: 321px) and (max-width: 500px) {
   .jumbotron-container {
-    height: 900px;
+    height: 930px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
