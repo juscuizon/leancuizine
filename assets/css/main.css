@@ -3189,12 +3189,11 @@ nav {
     .footer-container .footer-flex h4 {
       font-family: 'Molengo', sans-serif;
       color: white; }
-  .footer-container .logo {
+  .footer-container .logo-footer {
     background-image: url(../img/logo-header.png);
     background-repeat: no-repeat;
     width: 100px;
-    height: 100px;
-    z-index: 0; }
+    height: 100px; }
   .footer-container .nav-footer li {
     list-style: none;
     margin-bottom: 10px;
@@ -3240,49 +3239,53 @@ nav {
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px) {
   .footer-container {
-    height: 200px; }
-    .footer-container .logo {
+    height: 190px; }
+    .footer-container .nav-footer {
       display: none; } }
 
 /*=============Medium Phone Devices=============*/
 @media (min-width: 321px) and (max-width: 500px) {
   .footer-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 200px; }
+    min-height: 300px; }
     .footer-container .footer-flex {
+      height: 260px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
-              flex-direction: column; }
-    .footer-container .logo {
-      display: none; }
-    .footer-container .nav-footer {
-      display: none; } }
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .footer-container .footer-flex .nav-footer {
+        display: none; } }
 
 /*=============Small Phone Devices=============*/
 @media (min-width: 50px) and (max-width: 320px) {
   .footer-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 200px; }
+    min-height: 300px; }
     .footer-container .footer-flex {
+      height: 260px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
-              flex-direction: column; }
-    .footer-container .logo {
-      display: none; }
-    .footer-container .nav-footer {
-      display: none; } }
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .footer-container .footer-flex .nav-footer {
+        display: none; } }
 
 .filler {
   height: 150vh;
