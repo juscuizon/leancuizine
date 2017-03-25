@@ -32,6 +32,7 @@ nav
 	position: relative
 	text-align: right
 	top: -20px
+	right: 20px
 	z-index: 1
 
 	p
@@ -48,6 +49,11 @@ nav
 			size: 18px
 		color: #12dc12
 		text-decoration: none
+
+	a:hover
+			color: #211f1f
+			border-top: 4px solid #211f1f
+			transition: all 0.2s ease-in-out
 
 
 /*============End of Navigation Bar==============*/	
@@ -123,7 +129,11 @@ nav
 
 /*=============Medium Monitors=============*/
 @media (min-width: 960px) and (max-width: 1200px)
-	nav
+	nav 
+		display: block
+
+	.contact
+		right: 0px
 
 /*=============Small Monitors=============*/
 @media (min-width: 801px) and (max-width: 960px)
@@ -132,6 +142,12 @@ nav
 
 		li 
 			margin-right: 45px
+
+	.mobile-nav-button
+		display: none
+
+	.contact
+		right: 0px
 
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px)

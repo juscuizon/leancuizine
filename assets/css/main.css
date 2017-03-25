@@ -2636,7 +2636,9 @@ template {
 
 body {
   background-color: #efefef;
-  min-height: 1200px; }
+  min-height: 1400px;
+  min-width: 100vw;
+  overflow-x: hidden; }
 
 html {
   overflow-x: hidden; }
@@ -2677,6 +2679,7 @@ nav {
   position: relative;
   text-align: right;
   top: -20px;
+  right: 20px;
   z-index: 1; }
   .contact p {
     font-size: 15px; }
@@ -2688,6 +2691,11 @@ nav {
     font-size: 18px;
     color: #12dc12;
     text-decoration: none; }
+  .contact a:hover {
+    color: #211f1f;
+    border-top: 4px solid #211f1f;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
 
 /*============End of Navigation Bar==============*/
 .mobile-nav-button {
@@ -2755,12 +2763,22 @@ nav {
 
 /*=============End of Mobile Navigation=============*/
 /*=============Medium Monitors=============*/
+@media (min-width: 960px) and (max-width: 1200px) {
+  nav {
+    display: block; }
+  .contact {
+    right: 0px; } }
+
 /*=============Small Monitors=============*/
 @media (min-width: 801px) and (max-width: 960px) {
   nav {
     display: block; }
     nav li {
-      margin-right: 45px; } }
+      margin-right: 45px; }
+  .mobile-nav-button {
+    display: none; }
+  .contact {
+    right: 0px; } }
 
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px) {
@@ -2791,8 +2809,10 @@ nav {
 .jumbotron-container {
   background-image: url(../img/jumbotron-image.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+  height: 96vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2802,14 +2822,12 @@ nav {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-position: center center;
-  background-size: cover;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   top: -16px;
-  z-index: 0; }
+  z-index: 0;
+  overflow-x: hidden; }
   .jumbotron-container .logo {
     background-image: url(../img/logo-header.png);
     background-repeat: no-repeat;
@@ -2818,9 +2836,9 @@ nav {
     margin: 0 auto;
     border-bottom: 20px;
     z-index: 1; }
-  .jumbotron-container p {
+  .jumbotron-container p, .jumbotron-container h1 {
     font-family: 'Lobster Two', cursive;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     color: #f3f3f3;
     margin-bottom: 20px; }
@@ -2839,7 +2857,7 @@ nav {
     padding-top: 12px;
     padding-bottom: 15px;
     width: 180px;
-    height: 40px;
+    height: 45px;
     margin-top: 20px;
     text-decoration: none;
     display: inline-block;
@@ -2854,7 +2872,14 @@ nav {
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px) {
   .jumbotron-container {
-    height: 650px; }
+    height: 800px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
   .logo {
     position: absolute;
     top: 20px;
@@ -2865,7 +2890,14 @@ nav {
 /*=============Medium Phone Devices=============*/
 @media (min-width: 321px) and (max-width: 500px) {
   .jumbotron-container {
-    height: 890px; }
+    height: 890px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
   .logo {
     position: absolute;
     top: 20px;
@@ -2876,10 +2908,253 @@ nav {
 /*=============Small Phone Devices=============*/
 @media (min-width: 50px) and (max-width: 320px) {
   .jumbotron-container {
-    height: 950px; }
+    height: 750px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .jumbotron-container p, .jumbotron-container h1 {
+      font-size: 35px; }
+    .jumbotron-container .about-excerpt {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      font-size: 25px; }
   .logo {
     position: absolute;
     top: 20px;
     margin: 0;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; } }
+
+.home-contact-container {
+  width: 100vw;
+  background-color: snow;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  top: -16px;
+  overflow-x: hidden;
+  z-index: 0; }
+  .home-contact-container .center-home-contact {
+    text-align: center;
+    padding-bottom: 10px; }
+  .home-contact-container .contact-excerpt,
+  .home-contact-container .newsletter {
+    width: 100vw;
+    min-height: 100px; }
+  .home-contact-container .contact-excerpt {
+    padding-right: 20px; }
+    .home-contact-container .contact-excerpt h2 {
+      margin-bottom: 20px;
+      font-family: 'Lobster Two', cursive;
+      font-size: 40px;
+      color: #12dc12; }
+    .home-contact-container .contact-excerpt h3 {
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 22px;
+      color: #12dc12; }
+    .home-contact-container .contact-excerpt h4 {
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 20px;
+      color: #12dc12; }
+    .home-contact-container .contact-excerpt a {
+      font-size: 20px;
+      color: #12dc12;
+      text-decoration: none; }
+  .home-contact-container .contact-excerpt-submenu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    margin-bottom: 20px; }
+  .home-contact-container .contact-excerpt-card {
+    border-left: 0.5px solid #dedede;
+    padding-left: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .home-contact-container span {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 20px;
+    color: #12dc12; }
+  .home-contact-container button {
+    background-color: green;
+    border: none;
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    width: 180px;
+    height: 45px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Lekton', sans-serif;
+    font-size: 16px;
+    z-index: 0; }
+  .home-contact-container button:hover {
+    background-color: #12dc12; }
+  .home-contact-container textarea {
+    resize: none; }
+  .home-contact-container .newsletter {
+    padding-right: 20px; }
+    .home-contact-container .newsletter h2 {
+      margin-bottom: 20px;
+      font-family: 'Lobster Two', cursive;
+      font-size: 40px;
+      color: #12dc12; }
+    .home-contact-container .newsletter h3 {
+      font-family: 'Lobster Two', cursive;
+      font-size: 22px;
+      color: #12dc12; }
+  .home-contact-container ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .home-contact-container ul li {
+      list-style: none;
+      margin: 15px; }
+      .home-contact-container ul li a {
+        font-size: 35px;
+        color: #12dc12; }
+      .home-contact-container ul li a:hover {
+        color: black; }
+  .home-contact-container #mc_embed_signup {
+    background: none;
+    clear: left;
+    font: 14px Helvetica,Arial,sans-serif;
+    width: 100%;
+    color: #12dc12; }
+
+/*=============Medium Monitors=============*/
+/*=============Small Monitors=============*/
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px) {
+  .home-contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .home-contact-container .contact-excerpt,
+    .home-contact-container .newsletter {
+      border-bottom: 0.5px solid #dedede; } }
+
+/*=============Medium Phone Devices=============*/
+@media (min-width: 321px) and (max-width: 500px) {
+  .home-contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .home-contact-container .contact-excerpt,
+    .home-contact-container .newsletter {
+      padding: 0px;
+      margin: 0px;
+      width: 99vw; }
+    .home-contact-container .contact-excerpt-submenu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      margin-bottom: 10px; }
+    .home-contact-container .contact-form-home {
+      text-align: center;
+      border-bottom: 0.5px solid #dedede;
+      padding-bottom: 10px; }
+    .home-contact-container .contact-excerpt-card {
+      text-align: center;
+      padding-top: 10px;
+      border-left: none; }
+    .home-contact-container ul {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .home-contact-container .newsletter {
+      border-left: none; } }
+
+/*=============Small Phone Devices=============*/
+@media (min-width: 50px) and (max-width: 320px) {
+  .home-contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .home-contact-container .contact-excerpt,
+    .home-contact-container .newsletter {
+      padding: 0px;
+      margin: 0px;
+      width: 99vw; }
+    .home-contact-container .contact-excerpt-submenu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      margin-bottom: 10px; }
+    .home-contact-container .contact-form-home {
+      text-align: center;
+      border-bottom: 0.5px solid #dedede;
+      padding-bottom: 10px; }
+    .home-contact-container .contact-excerpt-card {
+      text-align: center;
+      padding-top: 10px;
+      border-left: none; }
+    .home-contact-container ul {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .home-contact-container .newsletter {
+      border-left: none; } }

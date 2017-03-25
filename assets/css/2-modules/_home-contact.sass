@@ -1,0 +1,215 @@
+.home-contact-container
+	width: 100vw
+	background-color: snow
+	display: flex
+	flex-direction: row
+	top: -16px
+	overflow-x: hidden
+	z-index: 0
+
+	.center-home-contact
+		text-align: center
+		padding-bottom: 10px
+
+	.contact-excerpt,
+	.newsletter
+		width: 100vw
+		min-height: 100px
+
+	.contact-excerpt
+		//background-color: pink
+		padding-right: 20px
+
+		h2
+			margin-bottom: 20px
+			font:
+				family: 'Lobster Two', cursive
+				size: 40px
+			color: #12dc12
+
+		h3
+			font:
+				family: 'Cabin Condensed', sans-serif
+				size: 22px
+			color: #12dc12
+
+		h4
+			font: 
+				family: 'Cabin Condensed', sans-serif
+				size: 20px
+			color: #12dc12
+
+		a 
+			font-size: 20px
+			color: #12dc12
+			text-decoration: none
+
+		
+	.contact-excerpt-submenu
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		margin-bottom: 20px
+
+	.contact-form-home
+
+
+	.contact-excerpt-card
+		border-left: 0.5px solid #dedede
+		padding-left: 10px
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+
+	span 
+		font: 
+			family: 'Cabin Condensed', sans-serif
+			size: 20px
+		color: #12dc12
+	
+	button
+		background-color: green
+		border: none
+			radius: 2px
+		color: white
+		padding-top: 12px
+		padding-bottom: 15px
+		width: 180px
+		height: 45px
+		margin-top: 20px
+		text-decoration: none
+		display: inline-block
+		font:
+			family: 'Lekton', sans-serif
+			size: 16px
+		z-index: 0
+
+	button:hover
+		background-color: #12dc12
+
+	textarea
+		resize: none
+
+	.newsletter
+		//background-color: blue
+		padding-right: 20px
+		//border-left: 2px solid #12dc12
+		
+		h2
+			margin-bottom: 20px
+			font:
+				family: 'Lobster Two', cursive
+				size: 40px
+			color: #12dc12
+
+		h3
+			font:
+				family: 'Lobster Two', cursive
+				size: 22px
+			color: #12dc12
+
+	ul
+		display: flex
+		justify-content: center
+
+		li 
+			list-style: none
+			margin: 15px
+
+			a 
+				font-size: 35px
+				color: #12dc12
+
+			a:hover
+				color: black
+
+
+	#mc_embed_signup
+		background: none 
+		clear: left 
+		font: 14px Helvetica,Arial,sans-serif 
+		width: 100% 
+		color: #12dc12
+
+/*=============Medium Monitors=============*/
+@media (min-width: 960px) and (max-width: 1200px)
+	.home-contact-container
+
+/*=============Small Monitors=============*/
+@media (min-width: 801px) and (max-width: 960px)
+	.home-contact-container
+
+/*=============Small Monitors and Medium Mobile Devices=============*/
+@media (min-width: 501px) and (max-width: 800px)
+	.home-contact-container
+		flex-direction: column
+
+		.contact-excerpt,
+		.newsletter
+			border-bottom: 0.5px solid #dedede
+
+/*=============Medium Phone Devices=============*/
+@media (min-width: 321px) and (max-width: 500px)
+	.home-contact-container
+		flex-direction: column
+
+		.contact-excerpt,
+		.newsletter
+			padding: 0px
+			margin: 0px
+			width: 99vw
+
+		.contact-excerpt-submenu
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			margin-bottom: 10px
+		
+		.contact-form-home
+			text-align: center
+			border-bottom: 0.5px solid #dedede
+			padding-bottom: 10px
+
+		.contact-excerpt-card
+			text-align: center
+			padding-top: 10px
+			border-left: none
+
+		ul 
+			justify-content: center
+
+		.newsletter
+			border-left: none
+
+/*=============Small Phone Devices=============*/
+@media (min-width: 50px) and (max-width: 320px)
+	.home-contact-container
+		flex-direction: column
+
+		.contact-excerpt,
+		.newsletter
+			padding: 0px
+			margin: 0px
+			width: 99vw
+
+		.contact-excerpt-submenu
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			margin-bottom: 10px
+		
+		.contact-form-home
+			text-align: center
+			border-bottom: 0.5px solid #dedede
+			padding-bottom: 10px
+
+		.contact-excerpt-card
+			text-align: center
+			padding-top: 10px
+			border-left: none
+
+		ul 
+			justify-content: center
+
+		.newsletter
+			border-left: none

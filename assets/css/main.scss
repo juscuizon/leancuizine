@@ -10,8 +10,9 @@
 @import '1-basics/page-rules';
 
 // 2 - modules
-@import '2-modules/header';
-@import '2-modules/jumbotron';
+@import '2-modules/main-navigation';
+@import '2-modules/home-jumbotron';
+@import '2-modules/home-contact';
 
 // 3 - pages
 @import '3-pages/blog-content-container';

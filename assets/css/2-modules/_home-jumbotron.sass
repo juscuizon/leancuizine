@@ -2,18 +2,19 @@
 	background:
 		image: url(../img/jumbotron-image.jpg)
 		repeat: no-repeat
-	width: 100%
-	height: 100vh
-	display: flex
-	flex-direction: column
-	justify-content: center
-	background:
 		position: center center
 		size: cover
+	width: 100vw
+	height: 96vh
+	display: flex
+	flex-direction: column
+	justify-content: space-around
 	top: -16px
 	z-index: 0
+	overflow-x: hidden
 
 	.logo
+
 		background:
 			image: url(../img/logo-header.png)
 			repeat: no-repeat
@@ -23,10 +24,10 @@
 		border-bottom: 20px
 		z-index: 1
 
-	p 
+	p, h1
 		font:
 			family: 'Lobster Two', cursive
-			size: 40px
+			size: 50px
 		text-align: center
 		color: #f3f3f3
 		margin-bottom: 20px
@@ -48,7 +49,7 @@
 		padding-top: 12px
 		padding-bottom: 15px
 		width: 180px
-		height: 40px
+		height: 45px
 		margin-top: 20px
 		text-decoration: none
 		display: inline-block
@@ -71,7 +72,9 @@
 /*=============Small Monitors and Medium Mobile Devices=============*/
 @media (min-width: 501px) and (max-width: 800px)
 	.jumbotron-container
-		height: 650px
+		height: 800px
+		justify-content: center
+		flex-wrap: wrap
 
 	.logo
 		position: absolute
@@ -83,6 +86,8 @@
 @media (min-width: 321px) and (max-width: 500px)
 	.jumbotron-container
 		height: 890px
+		justify-content: center
+		flex-wrap: wrap
 
 	.logo
 		position: absolute
@@ -94,7 +99,17 @@
 /*=============Small Phone Devices=============*/
 @media (min-width: 50px) and (max-width: 320px)
 	.jumbotron-container
-		height: 950px
+		height: 750px
+		justify-content: center
+		flex-wrap: wrap
+
+		p, h1
+			font-size: 35px
+
+		.about-excerpt
+			flex-wrap: wrap
+			font-size: 25px
+		
 
 	.logo
 		position: absolute
