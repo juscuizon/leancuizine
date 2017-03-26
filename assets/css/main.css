@@ -2958,14 +2958,15 @@ nav {
       color: #12dc12; }
     .home-contact-container .contact-excerpt h3 {
       font-family: 'Cabin Condensed', sans-serif;
-      font-size: 22px;
+      font-size: 16px;
       color: #12dc12; }
     .home-contact-container .contact-excerpt h4 {
       font-family: 'Cabin Condensed', sans-serif;
-      font-size: 20px;
+      font-size: 18px;
       color: #12dc12; }
     .home-contact-container .contact-excerpt a {
-      font-size: 20px;
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 15px;
       color: #12dc12;
       text-decoration: none; }
     .home-contact-container .contact-excerpt a:hover {
@@ -3210,6 +3211,7 @@ nav {
     margin: 0 auto;
     top: 0px;
     font-family: 'Molengo', sans-serif;
+    font-size: 10px;
     color: white; }
     .footer-container .copyright a {
       text-decoration: none;
