@@ -2665,13 +2665,13 @@ nav {
       color: #211f1f;
       text-decoration: none; }
     nav li a:hover {
-      color: #12dc12;
-      border-top: 4px solid green;
+      color: #54ff00;
+      border-top: 4px solid #54ff00;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
   nav li.active a {
     color: #12dc12;
-    border-top: 5px solid green;
+    border-top: 5px solid #54ff00;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
 
@@ -2692,8 +2692,8 @@ nav {
     color: #12dc12;
     text-decoration: none; }
   .contact a:hover {
-    color: #211f1f;
-    border-top: 4px solid #211f1f;
+    color: #54ff00;
+    border-top: 4px solid #54ff00;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
 
@@ -2723,7 +2723,7 @@ nav {
 #mobile-menu {
   position: fixed;
   display: none;
-  background-color: #fefefe;
+  background: rgba(255, 255, 255, 0.95);
   text-align: center;
   overflow-y: hidden;
   min-width: 100%;
@@ -2847,7 +2847,7 @@ nav {
   .jumbotron-container a {
     margin: 0 auto; }
   .jumbotron-container button {
-    background-color: green;
+    background-color: #12dc12;
     border: none;
       -webkit-border-radius: 2px;
               border-radius: 2px;
@@ -2863,7 +2863,9 @@ nav {
     font-size: 16px;
     z-index: 0; }
   .jumbotron-container button:hover {
-    background-color: #12dc12; }
+    background-color: #54ff00;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
 
 /*=============Medium Monitors=============*/
 /*=============Small Monitors=============*/
@@ -2970,7 +2972,7 @@ nav {
       color: #12dc12;
       text-decoration: none; }
     .home-contact-container .contact-excerpt a:hover {
-      color: green;
+      color: #54ff00;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
   .home-contact-container .contact-excerpt-submenu {
@@ -3007,7 +3009,7 @@ nav {
     font-size: 20px;
     color: #12dc12; }
   .home-contact-container button {
-    background-color: green;
+    background-color: #12dc12;
     border: none;
       -webkit-border-radius: 2px;
               border-radius: 2px;
@@ -3023,7 +3025,9 @@ nav {
     font-size: 16px;
     z-index: 0; }
   .home-contact-container button:hover {
-    background-color: #12dc12; }
+    background-color: #54ff00;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .home-contact-container textarea {
     resize: none; }
   .home-contact-container .newsletter {
@@ -3053,7 +3057,9 @@ nav {
         font-size: 35px;
         color: #12dc12; }
       .home-contact-container ul li a:hover {
-        color: black; }
+        color: #54ff00;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
   .home-contact-container #mc_embed_signup {
     background: none;
     clear: left;
@@ -3174,7 +3180,7 @@ nav {
   height: 150px;
   bottom: 0px;
   left: 0px;
-  background-color: green; }
+  background-color: #12dc12; }
   .footer-container .footer-flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3204,7 +3210,7 @@ nav {
     text-decoration: none;
     color: white; }
   .footer-container .nav-footer a:hover {
-    color: #12dc12;
+    color: #54ff00;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
   .footer-container .copyright {
@@ -3217,7 +3223,7 @@ nav {
       text-decoration: none;
       color: white; }
     .footer-container .copyright a:hover {
-      color: #12dc12;
+      color: #54ff00;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
   .footer-container .social-media {
@@ -3234,7 +3240,7 @@ nav {
       .footer-container .social-media ul a {
         color: white; }
       .footer-container .social-media ul a:hover {
-        color: #12dc12; }
+        color: #54ff00; }
 
 /*=============Medium Monitors=============*/
 /*=============Small Monitors=============*/
